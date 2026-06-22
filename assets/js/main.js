@@ -29,6 +29,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Slider de portada
+  const heroSlides = Array.from(document.querySelectorAll(".hero-slide"));
+  const heroDots = Array.from(document.querySelectorAll(".hero-dot"));
+  let heroIndex = 0;
+
+  const setHeroSlide = (nextIndex) => {
+    if (!heroSlides.length) return;
+    heroIndex = nextIndex % heroSlides.length;
+    heroSlides.forEach((slide, index) => {
+      slide.classList.toggle("active", index === heroIndex);
+    });
+    heroDots.forEach((dot, index) => {
+      dot.classList.toggle("active", index === heroIndex);
+    });
+  };
+
+  heroDots.forEach((dot, index) => {
+    dot.addEventListener("click", () => setHeroSlide(index));
+  });
+
+  if (heroSlides.length > 1) {
+    setInterval(() => setHeroSlide(heroIndex + 1), 5200);
+  }
+
   // Año dinámico en footer
   document.querySelectorAll(".current-year").forEach((el) => {
     el.textContent = new Date().getFullYear();

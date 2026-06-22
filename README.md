@@ -24,7 +24,7 @@ mg-service-web/
 
 ## ⚠️ Antes de publicar — reemplazar:
 
-1. **Número de WhatsApp**: está como placeholder `5491100000000` en los botones de WhatsApp (header, hero, CTA finales, footer, botón flotante). Buscá y reemplazá ese número por el real, con formato `549` + código de área + número, sin espacios ni guiones. Aparece en los 5 archivos `.html`.
+1. **Número de WhatsApp**: está como placeholder `5491122334658` en los botones de WhatsApp (header, hero, CTA finales, footer, botón flotante). Buscá y reemplazá ese número por el real, con formato `549` + código de área + número, sin espacios ni guiones. Aparece en los 5 archivos `.html`.
 2. **Email de contacto**: `info@mgservice.com.ar` en el footer y en `contacto.html` — cambiar por el real si es distinto.
 3. **Horarios**: en `contacto.html`, sección de horarios — ajustar si no coinciden con la realidad.
 4. **Galería de Trabajos** (`trabajos.html`): hay 2 fotos reales y 4 placeholders ("Próximo trabajo documentado"). A medida que tengan fotos de trabajos terminados (con autorización del cliente), reemplazar los placeholders por `<img>` reales siguiendo el mismo patrón que las dos primeras.
