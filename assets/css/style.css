@@ -996,7 +996,7 @@ p { color: var(--c-steel); }
    El oro se usa solo para acciones de turno y la ruta concierge.
    ========================================================================== */
 body {
-  --c-wall: #8f959d;
+  --c-wall: #3b4048;
   --font-display: "Archivo", "Arial Narrow", sans-serif;
   --font-body: "Archivo", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: var(--font-body);
@@ -1066,11 +1066,39 @@ a:focus-visible {
   animation: h-cut-in 0.9s cubic-bezier(.2,.7,.2,1) both;
 }
 .h-hero-photo img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: 70% 50%;
+  opacity: 0;
+  transform: scale(1.06);
+  transition: opacity 1.2s ease, transform 7s linear;
 }
+.h-hero-photo img.is-active { opacity: 1; transform: scale(1); }
+.h-hero-photo img:nth-of-type(2) { object-position: 22% 50%; }
+.h-hero-dots {
+  position: absolute;
+  right: max(24px, calc((100vw - var(--container)) / 2 + 24px));
+  bottom: 32px;
+  z-index: 2;
+  display: flex;
+  gap: 6px;
+}
+.h-hero-dot {
+  width: 22px;
+  height: 30px;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  background: rgba(242, 241, 237, 0.4);
+  clip-path: polygon(45% 0, 100% 0, 55% 100%, 0 100%);
+  transition: background 0.3s ease;
+}
+.h-hero-dot:hover { background: rgba(242, 241, 237, 0.75); }
+.h-hero-dot.is-active { background: var(--c-bone); }
+.h-hero-dot:focus-visible { outline: 2px solid var(--c-gold); outline-offset: 4px; clip-path: none; }
 .h-hero-stripes {
   position: absolute;
   inset: 0 auto 0 -1px;
@@ -1144,11 +1172,117 @@ a:focus-visible {
   align-items: center;
 }
 .h-wall-split img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
-.h-wall-band { height: 28px; background: #2b2e33; }
-.h-wall-bottom { background: var(--c-wall); color: var(--c-black); padding: 64px 0 80px; }
-.h-promises { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
-.h-promises h3 { margin-bottom: 8px; }
-.h-promises p { color: #1f2124; }
+.h-wall-band { height: 28px; background: #1f2226; }
+.h-wall-bottom { background: var(--c-wall); color: var(--c-bone); padding: 88px 0 110px; }
+.h-proof-title { max-width: 16em; margin-bottom: 56px; }
+.h-proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.h-proof-item h3 { font-size: 1.5rem; margin: 32px 0 10px; }
+.h-proof-item { position: relative; }
+.h-proof-item p { color: #c9ccd1; }
+.h-proof-art {
+  height: 300px;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+/* Hoja de presupuesto */
+.h-slip {
+  position: relative;
+  width: min(100%, 290px);
+  background: var(--c-bone);
+  color: var(--c-black);
+  padding: 22px 22px 26px;
+  box-shadow: 0 22px 44px -16px rgba(0, 0, 0, 0.7);
+  transform: rotate(-3deg);
+}
+.h-slip-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--c-black);
+  margin-bottom: 12px;
+}
+.h-slip-head strong { font-stretch: 125%; font-style: italic; font-weight: 800; font-size: 1.05rem; }
+.h-slip-head span { font-size: 0.75rem; color: #5e636c; }
+.h-slip ul { list-style: none; display: grid; gap: 9px; margin-bottom: 26px; }
+.h-slip li {
+  font-size: 0.85rem;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.h-slip li::after {
+  content: "";
+  flex: 1;
+  height: 6px;
+  margin-left: 4px;
+  background: repeating-linear-gradient(90deg, rgba(14,15,17,0.18) 0 3px, transparent 3px 6px);
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+.h-slip-sign {
+  font-size: 0.72rem;
+  color: #5e636c;
+  border-top: 1px solid rgba(14,15,17,0.35);
+  padding-top: 6px;
+  width: 60%;
+}
+.h-slip-stamp {
+  position: absolute;
+  right: 14px;
+  bottom: 22px;
+  padding: 6px 12px;
+  border: 3px solid #2b2e33;
+  color: #2b2e33;
+  font-stretch: 125%;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 1rem;
+  transform: rotate(-12deg);
+  opacity: 0.85;
+}
+
+/* Foto de motor con el corte del logo */
+.h-proof-photo { overflow: hidden; clip-path: polygon(12% 0, 100% 0, 88% 100%, 0 100%); }
+.h-proof-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Chat de WhatsApp */
+.h-chat { width: min(100%, 300px); display: grid; gap: 10px; }
+.h-chat-bubble,
+.h-chat-reply {
+  position: relative;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  padding: 8px 10px 22px;
+  border-radius: 10px;
+  box-shadow: 0 14px 30px -16px rgba(14, 15, 17, 0.6);
+}
+.h-chat-bubble { background: var(--c-black); color: var(--c-bone); border-top-left-radius: 2px; }
+.h-chat-bubble img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 6px; margin-bottom: 8px; }
+.h-chat-bubble p { color: var(--c-bone); font-size: 0.88rem; }
+.h-chat-reply {
+  justify-self: end;
+  background: var(--c-bone);
+  color: var(--c-black);
+  border-top-right-radius: 2px;
+  padding-right: 48px;
+}
+.h-chat-time { position: absolute; right: 10px; bottom: 5px; font-size: 0.68rem; opacity: 0.6; }
+
+/* Entrada de las tres piezas, una sola vez */
+.h-proof.is-waiting .h-slip { opacity: 0; transform: translateY(40px) rotate(4deg); }
+.h-proof.is-waiting .h-proof-photo { clip-path: polygon(100% 0, 100% 0, 88% 100%, 88% 100%); }
+.h-proof.is-waiting .h-chat > * { opacity: 0; transform: translateY(24px) scale(0.96); }
+.h-proof.is-waiting .h-slip-stamp { opacity: 0; transform: rotate(-12deg) scale(1.8); }
+.h-slip { transition: opacity 0.6s ease, transform 0.8s cubic-bezier(.2,.8,.2,1); }
+.h-slip-stamp { transition: opacity 0.2s ease 0.9s, transform 0.35s cubic-bezier(.3,1.6,.5,1) 0.9s; }
+.h-proof-photo { transition: clip-path 0.9s cubic-bezier(.2,.8,.2,1) 0.15s; }
+.h-chat > * { transition: opacity 0.5s ease, transform 0.6s cubic-bezier(.2,.8,.2,1); }
+.h-chat > :first-child { transition-delay: 0.35s; }
+.h-chat > :last-child { transition-delay: 0.9s; }
 
 /* Trabajos */
 .h-work { padding: 110px 0; }
@@ -1220,7 +1354,8 @@ a:focus-visible {
   .h-route-steps li:nth-child(2)::after { display: none; }
   .h-wall-split,
   .h-visit-grid { grid-template-columns: 1fr; gap: 40px; }
-  .h-promises { grid-template-columns: 1fr; gap: 28px; }
+  .h-proof { grid-template-columns: 1fr; gap: 64px; }
+  .h-proof-art { height: 280px; }
   .h-brand-grid { grid-template-columns: repeat(4, 1fr); }
 }
 
@@ -1274,4 +1409,138 @@ a:focus-visible {
   .service-detail > div { grid-template-columns: 1fr; gap: 10px; }
   .page-hero { padding: 64px 0 48px; }
   .cta-final { padding: 72px 0; }
+}
+
+/* Servicios: columna fija con foto y progreso, servicios que pasan al scrollear */
+.svc-scroll { padding: 40px 0 120px; }
+.svc-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: 72px;
+  align-items: start;
+}
+.svc-aside { position: sticky; top: 118px; }
+.svc-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--c-charcoal);
+  clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+}
+.svc-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 0.6s ease, transform 1.2s ease;
+}
+.svc-media img.is-active { opacity: 1; transform: scale(1); }
+.svc-progress { margin-top: 28px; display: grid; gap: 12px; }
+.svc-current {
+  font-stretch: 125%;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--c-bone);
+}
+.svc-bar { display: block; height: 2px; background: var(--c-line); }
+.svc-bar-fill {
+  display: block;
+  height: 100%;
+  width: 12.5%;
+  background: var(--c-bone);
+  transition: width 0.4s ease;
+}
+
+.svc-list { display: grid; gap: 28vh; padding: 12vh 0 20vh; }
+.svc-panel {
+  padding: 8px 0 8px 32px;
+  border-left: 2px solid var(--c-line);
+  transition: opacity 0.4s ease, border-color 0.4s ease;
+}
+.svc-panel h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); margin-bottom: 16px; }
+.svc-panel p { font-size: 1.1rem; }
+.js .svc-panel { opacity: 0.35; }
+.js .svc-panel.is-active { opacity: 1; border-left-color: var(--c-bone); }
+
+@media (max-width: 900px) {
+  .svc-grid { grid-template-columns: 1fr; gap: 0; }
+  .svc-aside {
+    top: 78px;
+    z-index: 2;
+    margin: 0 -24px;
+    padding: 16px 24px;
+    background: var(--c-black);
+    border-bottom: 1px solid var(--c-line);
+  }
+  .svc-media { aspect-ratio: 16 / 9; clip-path: none; }
+  .svc-progress { margin-top: 14px; }
+  .svc-list { gap: 18vh; padding: 10vh 0 24vh; }
+  .svc-panel { padding-left: 20px; }
+}
+
+/* Ruta concierge dinámica: los pasos se encienden y la línea se llena al scrollear */
+.h-route-steps li::after {
+  background: linear-gradient(90deg, var(--c-gold-dim) calc(var(--fill, 1) * 100%), var(--c-line) 0);
+}
+.h-route.is-live .h-route-steps li::before { transition: background 0.3s ease, color 0.3s ease; }
+.h-route.is-live .h-route-steps li h3,
+.h-route.is-live .h-route-steps li p { transition: opacity 0.3s ease; }
+.h-route.is-live .h-route-steps li:not(.is-reached)::before { background: var(--c-charcoal-2); color: var(--c-steel-dim); }
+.h-route.is-live .h-route-steps li:not(.is-reached) h3,
+.h-route.is-live .h-route-steps li:not(.is-reached) p { opacity: 0.3; }
+
+.h-route.is-pinned { height: 240vh; padding: 0; }
+.h-route.is-pinned .h-route-pin {
+  position: sticky;
+  top: 78px;
+  height: calc(100vh - 78px);
+  display: flex;
+  align-items: center;
+}
+.h-route.is-pinned .h-route-pin > .container { width: 100%; }
+
+@media (max-width: 760px) {
+  .h-route-steps li::after {
+    background: linear-gradient(180deg, var(--c-gold-dim) calc(var(--fill, 1) * 100%), var(--c-line) 0);
+  }
+  .h-hero-dots { bottom: auto; top: calc(clamp(260px, 72vw, 440px) - 46px); right: 16px; }
+}
+
+/* Viñeta de cada pieza: cuándo la recibís */
+.h-proof-tag {
+  position: absolute;
+  top: -16px;
+  left: 0;
+  z-index: 3;
+  padding: 7px 18px 7px 14px;
+  background: var(--c-bone);
+  color: var(--c-black);
+  font-stretch: 112%;
+  font-weight: 700;
+  font-size: 0.85rem;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+  box-shadow: 0 6px 14px -6px rgba(0, 0, 0, 0.6);
+}
+.h-proof.is-waiting .h-proof-tag { opacity: 0; transform: translateX(-12px); }
+.h-proof-tag { transition: opacity 0.4s ease, transform 0.5s ease; }
+.h-proof-item:nth-child(2) .h-proof-tag { transition-delay: 0.15s; }
+.h-proof-item:nth-child(3) .h-proof-tag { transition-delay: 0.3s; }
+
+@media (max-width: 760px) {
+  .wa-float { font-size: 0; gap: 0; padding: 16px; right: 16px; bottom: 16px; }
+  .wa-float svg { width: 26px; height: 26px; }
+  .h-wall-bottom { padding: 72px 0 88px; }
+  .h-proof-title { margin-bottom: 48px; }
+  .h-proof-item h3 { margin-top: 24px; }
+}
+
+@media (max-width: 760px) {
+  .h-proof-art { height: auto; min-height: 240px; padding: 12px 0; }
+  .h-proof-photo { height: 260px; padding: 0; }
+  .h-hero-dot { width: 30px; height: 40px; }
+  .h-hero-dots { top: calc(clamp(260px, 72vw, 440px) - 56px); gap: 4px; }
 }
