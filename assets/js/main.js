@@ -49,7 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
     dot.addEventListener("click", () => setHeroSlide(index));
   });
 
-  if (heroSlides.length > 1) {
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (heroSlides.length > 1 && !reduceMotion) {
     setInterval(() => setHeroSlide(heroIndex + 1), 5200);
   }
 

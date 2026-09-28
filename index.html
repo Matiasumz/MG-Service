@@ -7,14 +7,15 @@
 <meta name="description" content="Taller de mecánica integral para vehículos de alta gama y multimarca. Diagnóstico avanzado, servicio concierge con retiro y entrega, y presupuesto por escrito. Avellaneda, zona sur GBA.">
 <link rel="icon" type="image/png" href="assets/img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="home">
 
 <header class="site-header">
   <div class="container">
-    <a href="index.html" class="logo"><img src="assets/img/logo-white.png" alt="MG Service"></a>
+    <a href="index.html" class="logo"><img src="assets/img/logo-transparent.png" alt="MG Service"></a>
     <nav class="main-nav">
       <a href="index.html">Inicio</a>
       <a href="servicios.html">Servicios</a>
@@ -29,206 +30,112 @@
 
 <main>
 
-  <section class="hero hero-slider" aria-label="Presentación de MG Service">
-    <div class="hero-slide active" style="background-image: url('assets/img/workshop/fachada-mg-service.jpg')"></div>
-    <div class="hero-slide" style="background-image: url('assets/img/workshop/taller-autos-premium.jpg')"></div>
-    <div class="hero-slide" style="background-image: url('assets/img/workshop/ram-diagnostico-taller.jpg')"></div>
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <span class="eyebrow"><span class="stripes"></span>Mecánica de precisión</span>
-      <h1>MG Service</h1>
-      <p class="hero-kicker">Mecánica integral de alta gama, diagnóstico avanzado y servicio concierge con retiro y entrega a domicilio.</p>
-      <div class="hero-actions">
-        <a href="trabajos.html" class="btn btn-primary">Ver trabajos</a>
-        <a href="https://wa.me/5491122334658?text=Hola%2C%20quiero%20consultar%20sobre%20mi%20auto" class="btn btn-outline">Pedir turno</a>
-      </div>
+  <section class="h-hero">
+    <div class="h-hero-photo">
+      <img src="assets/img/workshop/ram-diagnostico-taller.jpg" alt="RAM y un auto con el capó abierto en diagnóstico dentro del taller MG Service">
+      <span class="h-hero-stripes" aria-hidden="true"></span>
     </div>
-    <div class="hero-controls" aria-label="Controles del slider">
-      <button class="hero-dot active" type="button" aria-label="Ver fachada"></button>
-      <button class="hero-dot" type="button" aria-label="Ver taller"></button>
-      <button class="hero-dot" type="button" aria-label="Ver diagnóstico"></button>
+    <div class="container h-hero-inner">
+      <h1>Mecánica integral para autos de alta gama.</h1>
+      <p class="h-lead">Pasamos a buscar tu auto, te mandamos el diagnóstico y el presupuesto por escrito, y te lo devolvemos terminado.</p>
+      <div class="h-actions">
+        <a href="https://wa.me/5491122334658?text=Hola%2C%20quiero%20pedir%20un%20turno" class="btn btn-primary">Pedir turno por WhatsApp</a>
+        <a href="trabajos.html" class="h-link">Ver trabajos</a>
+      </div>
+      <p class="h-place">Tte. Coronel Guiffra 1371, Avellaneda</p>
     </div>
   </section>
 
-  <section class="section intro-section" id="diferenciales">
+  <section class="h-route" aria-labelledby="route-title">
     <div class="container">
-      <p class="intro-copy">Un taller integral, a la altura de <span class="accent">tu auto</span></h1>
-      <p class="hero-sub">Diagnóstico profesional, atención personalizada y servicio concierge puerta a puerta — vos seguís con tu día, nosotros con tu auto.</p>
-      <div class="feature-tiles">
-        <article class="feature-tile">
-          <img src="assets/img/workshop/elevadores-bosch.jpg" alt="Elevadores y zona de trabajo de MG Service">
-          <div>
-            <span>01</span>
-            <h3>Equipamiento de vanguardia</h3>
-          </div>
-        </article>
-        <article class="feature-tile">
-          <img src="assets/img/workshop/motor-bmw-turbo.jpg" alt="Motor BMW en proceso de diagnóstico">
-          <div>
-            <span>02</span>
-            <h3>Diagnóstico preciso</h3>
-          </div>
-        </article>
-        <article class="feature-tile">
-          <img src="assets/img/workshop/taller-amplio.jpg" alt="Interior amplio del taller MG Service">
-          <div>
-            <span>03</span>
-            <h3>Trato personalizado</h3>
-          </div>
-        </article>
+      <div class="h-route-head">
+        <h2 id="route-title">Vos seguís con tu día. Nosotros, con tu auto.</h2>
+        <p>El servicio de retiro y entrega funciona así, de punta a punta:</p>
       </div>
+      <ol class="h-route-steps">
+        <li><h3>Coordinás por WhatsApp</h3><p>Nos contás qué necesita el auto y acordamos día y horario de retiro.</p></li>
+        <li><h3>Lo retiramos</h3><p>Pasamos a buscarlo por tu casa u oficina.</p></li>
+        <li><h3>Diagnóstico y presupuesto</h3><p>Te lo mandamos por escrito antes de empezar, con fotos si hace falta.</p></li>
+        <li><h3>Te lo devolvemos</h3><p>En el mismo lugar, con el trabajo terminado y documentado.</p></li>
+      </ol>
+      <a href="https://wa.me/5491122334658?text=Hola%2C%20quiero%20coordinar%20retiro%20y%20entrega%20de%20mi%20veh%C3%ADculo" class="btn btn-primary">Coordinar retiro por WhatsApp</a>
     </div>
   </section>
 
-  <section class="section section-alt">
-    <div class="container">
-      <div class="split editorial-split">
-        <img src="assets/img/workshop/instalaciones-elevadores.jpg" alt="Instalaciones de MG Service con elevadores">
-        <div class="split-text">
-          <span class="eyebrow"><span class="stripes"></span>Cómo trabajamos</span>
-          <h2>La diferencia está en el detalle</h2>
-          <p>Recibimos cada vehículo con una revisión ordenada, escaneo cuando corresponde y presupuesto claro. En mecánica integral buscamos detectar la causa real de la falla y no solo el síntoma.</p>
-          <p>Trabajamos con vehículos de alta gama y multimarca, documentando procesos y cuidando tanto la parte técnica como la estética del auto.</p>
-          <a href="servicios.html" class="btn btn-outline">Conocer servicios</a>
+  <section class="h-wall" aria-labelledby="wall-title">
+    <div class="h-wall-top">
+      <div class="container h-wall-split">
+        <div>
+          <h2 id="wall-title">Buscamos la causa, no el síntoma.</h2>
+          <p>Cada auto entra con una revisión ordenada y escaneo cuando corresponde. Trabajamos con vehículos de alta gama y multimarca, y cuidamos tanto la parte técnica como la estética.</p>
+          <a href="servicios.html" class="h-link h-link-dark">Ver servicios</a>
         </div>
+        <img src="assets/img/workshop/instalaciones-elevadores.jpg" alt="Elevadores y piso de trabajo de MG Service" loading="lazy">
+      </div>
+    </div>
+    <div class="h-wall-band" aria-hidden="true"></div>
+    <div class="h-wall-bottom">
+      <div class="container h-promises">
+        <div><h3>Presupuesto por escrito</h3><p>Sabés cuánto sale antes de que toquemos el auto.</p></div>
+        <div><h3>La falla, de raíz</h3><p>Revisamos los sistemas asociados para que no vuelva por lo mismo.</p></div>
+        <div><h3>Avances con fotos</h3><p>Te mostramos el trabajo por WhatsApp mientras avanza.</p></div>
       </div>
     </div>
   </section>
 
-  <section class="section concierge-section section-alt">
+  <section class="h-work" aria-labelledby="work-title">
     <div class="container">
-      <div class="split editorial-split">
-        <div class="split-text">
-          <span class="eyebrow"><span class="stripes"></span>Servicio concierge</span>
-          <h2>Retiro y entrega a domicilio</h2>
-          <p>Sabemos que tu tiempo vale. Coordinamos por WhatsApp, pasamos a retirar tu vehículo en el horario que te quede cómodo y te lo devolvemos terminado, sin que tengas que venir al taller.</p>
-          <p>Un servicio pensado para clientes premium que buscan comodidad, discreción y el mismo nivel de cuidado técnico que recibirías en nuestras instalaciones.</p>
-          <a href="https://wa.me/5491122334658?text=Hola%2C%20quiero%20coordinar%20retiro%20y%20entrega%20de%20mi%20veh%C3%ADculo" class="btn btn-primary">Coordinar retiro por WhatsApp</a>
-        </div>
-        <div class="concierge-steps">
-          <article><span>01</span><h3>Coordinás por WhatsApp</h3><p>Nos contás qué necesita tu auto y acordamos día y horario de retiro.</p></article>
-          <article><span>02</span><h3>Retiramos tu vehículo</h3><p>Pasamos a buscarlo donde estés, con el cuidado que merece un auto de alta gama.</p></article>
-          <article><span>03</span><h3>Te mantenemos informado</h3><p>Diagnóstico, presupuesto por escrito y avances durante todo el trabajo.</p></article>
-          <article><span>04</span><h3>Te lo devolvemos listo</h3><p>Entrega en el mismo punto, con el trabajo terminado y documentado.</p></article>
-        </div>
+      <h2 id="work-title">En el taller esta semana</h2>
+      <div class="h-work-grid">
+        <figure class="h-work-main">
+          <img src="assets/img/workshop/ram-y-elevadores.jpg" alt="RAM en MG Service junto a elevadores" loading="lazy">
+          <figcaption><strong>RAM</strong>Diagnóstico, reparación y mantenimiento de pick-ups.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/workshop/mercedes-frente.jpg" alt="Mercedes-Benz en MG Service" loading="lazy">
+          <figcaption><strong>Mercedes-Benz</strong>Mecánica integral premium.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/workshop/motor-bmw-turbo.jpg" alt="Motor BMW en proceso de diagnóstico" loading="lazy">
+          <figcaption><strong>BMW</strong>Diagnóstico de motor turbo.</figcaption>
+        </figure>
       </div>
+      <a href="trabajos.html" class="h-link">Ver todos los trabajos</a>
     </div>
   </section>
 
-  <section class="section brands-section">
+  <section class="h-brands" aria-labelledby="brands-title">
     <div class="container">
-      <div class="section-head">
-        <span class="eyebrow"><span class="stripes"></span>Alta gama · Multimarca</span>
-        <h2>Marcas que atendemos</h2>
-        <p>Vehículos premium y de gama media-alta con el mismo estándar de diagnóstico, cuidado y transparencia.</p>
-      </div>
-    </div>
-    <div class="brand-carousel" aria-label="Carrusel de marcas">
-      <div class="brand-track">
-        <div class="brand-logo"><img src="assets/img/brands/bmw.svg" alt="BMW" width="120" height="48"></div>
-        <div class="brand-logo"><img src="assets/img/brands/mercedes.svg" alt="Mercedes-Benz" width="120" height="48"></div>
-        <div class="brand-logo"><img src="assets/img/brands/audi.svg" alt="Audi" width="120" height="48"></div>
-        <div class="brand-logo"><img src="assets/img/brands/volkswagen.svg" alt="Volkswagen" width="120" height="48"></div>
-        <div class="brand-logo"><img src="assets/img/brands/jeep.svg" alt="Jeep" width="120" height="48"></div>
-        <div class="brand-logo"><img src="assets/img/brands/ram.svg" alt="RAM" width="120" height="48"></div>
-        <div class="brand-logo"><img src="assets/img/brands/peugeot.svg" alt="Peugeot" width="120" height="48"></div>
-        <div class="brand-logo"><img src="assets/img/brands/toyota.svg" alt="Toyota" width="120" height="48"></div>
-        <div class="brand-logo"><img src="assets/img/brands/ford.svg" alt="Ford" width="120" height="48"></div>
-        <div class="brand-logo"><img src="assets/img/brands/chevrolet.svg" alt="Chevrolet" width="120" height="48"></div>
-        <div class="brand-logo"><img src="assets/img/brands/fiat.svg" alt="Fiat" width="120" height="48"></div>
-        <div class="brand-logo"><img src="assets/img/brands/renault.svg" alt="Renault" width="120" height="48"></div>
-        <div class="brand-logo"><img src="assets/img/brands/bmw.svg" alt="BMW" width="120" height="48"></div>
-        <div class="brand-logo"><img src="assets/img/brands/mercedes.svg" alt="Mercedes-Benz" width="120" height="48"></div>
-        <div class="brand-logo"><img src="assets/img/brands/audi.svg" alt="Audi" width="120" height="48"></div>
-        <div class="brand-logo"><img src="assets/img/brands/volkswagen.svg" alt="Volkswagen" width="120" height="48"></div>
-        <div class="brand-logo"><img src="assets/img/brands/jeep.svg" alt="Jeep" width="120" height="48"></div>
-        <div class="brand-logo"><img src="assets/img/brands/ram.svg" alt="RAM" width="120" height="48"></div>
-        <div class="brand-logo"><img src="assets/img/brands/peugeot.svg" alt="Peugeot" width="120" height="48"></div>
-        <div class="brand-logo"><img src="assets/img/brands/toyota.svg" alt="Toyota" width="120" height="48"></div>
-        <div class="brand-logo"><img src="assets/img/brands/ford.svg" alt="Ford" width="120" height="48"></div>
-        <div class="brand-logo"><img src="assets/img/brands/chevrolet.svg" alt="Chevrolet" width="120" height="48"></div>
-        <div class="brand-logo"><img src="assets/img/brands/fiat.svg" alt="Fiat" width="120" height="48"></div>
-        <div class="brand-logo"><img src="assets/img/brands/renault.svg" alt="Renault" width="120" height="48"></div>
-      </div>
+      <h2 id="brands-title">Marcas que atendemos</h2>
+      <ul class="h-brand-grid">
+        <li><img src="assets/img/brands/bmw.svg" alt="BMW"></li>
+        <li><img src="assets/img/brands/mercedes.svg" alt="Mercedes-Benz"></li>
+        <li><img src="assets/img/brands/audi.svg" alt="Audi"></li>
+        <li><img src="assets/img/brands/volkswagen.svg" alt="Volkswagen"></li>
+        <li><img src="assets/img/brands/jeep.svg" alt="Jeep"></li>
+        <li><img src="assets/img/brands/ram.svg" alt="RAM"></li>
+        <li><img src="assets/img/brands/peugeot.svg" alt="Peugeot"></li>
+        <li><img src="assets/img/brands/toyota.svg" alt="Toyota"></li>
+        <li><img src="assets/img/brands/ford.svg" alt="Ford"></li>
+        <li><img src="assets/img/brands/chevrolet.svg" alt="Chevrolet"></li>
+        <li><img src="assets/img/brands/fiat.svg" alt="Fiat"></li>
+        <li><img src="assets/img/brands/renault.svg" alt="Renault"></li>
+      </ul>
     </div>
   </section>
 
-  <section class="section section-alt">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow"><span class="stripes"></span>Trabajos</span>
-        <h2>Vehículos en taller</h2>
+  <section class="h-visit" aria-labelledby="visit-title">
+    <div class="container h-visit-grid">
+      <div>
+        <h2 id="visit-title">Coordiná tu turno</h2>
+        <p>Contanos qué necesita tu auto y te respondemos por WhatsApp en el horario de atención.</p>
+        <dl class="h-facts">
+          <div><dt>Dirección</dt><dd>Tte. Coronel Guiffra 1371<br>B1870, Avellaneda, Buenos Aires</dd></div>
+          <div><dt>Horarios</dt><dd>Lunes a viernes, 9 a 18 hs<br>Sábados, 9 a 13 hs</dd></div>
+        </dl>
+        <a href="https://wa.me/5491122334658?text=Hola%2C%20quiero%20pedir%20un%20turno" class="btn btn-primary">Pedir turno por WhatsApp</a>
       </div>
-      <div class="work-showcase">
-        <article class="work-card large">
-          <img src="assets/img/workshop/ram-y-elevadores.jpg" alt="RAM en MG Service junto a elevadores">
-          <div>
-            <h3>Pick-ups y alta gama</h3>
-            <p>Diagnóstico, reparación y mantenimiento con procesos claros.</p>
-          </div>
-        </article>
-        <article class="work-card">
-          <img src="assets/img/workshop/jeep-renegade-service.jpg" alt="Jeep Renegade en zona de elevador">
-          <div>
-            <h3>Mecánica integral</h3>
-            <p>Service, tren delantero, frenos e inyección.</p>
-          </div>
-        </article>
-        <article class="work-card">
-          <img src="assets/img/workshop/mercedes-frente.jpg" alt="Mercedes-Benz en MG Service">
-          <div>
-            <h3>Premium multimarca</h3>
-            <p>Atención para BMW, Mercedes-Benz, Audi y más.</p>
-          </div>
-        </article>
-      </div>
-      <div class="gallery-strip" aria-label="Galería de detalles">
-        <img src="assets/img/workshop/detalle-motor-bmw.jpg" alt="Detalle de motor BMW">
-        <img src="assets/img/workshop/mercedes-kompressor.jpg" alt="Detalle Kompressor Mercedes-Benz">
-        <img src="assets/img/workshop/mercedes-c200.jpg" alt="Detalle Mercedes-Benz C200">
-      </div>
-    </div>
-  </section>
-
-  <section class="section key-section">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow"><span class="stripes"></span>Aspectos clave</span>
-        <h2>Qué cuidamos en cada reparación</h2>
-      </div>
-      <div class="key-grid">
-        <article>
-          <span>01</span>
-          <h3>Seguridad</h3>
-          <p>Que el auto vuelva con el nivel de respuesta y confiabilidad que necesita para circular.</p>
-        </article>
-        <article>
-          <span>02</span>
-          <h3>Funcionalidad</h3>
-          <p>Corregir la falla de raíz, cuidando cada sistema asociado antes de entregar.</p>
-        </article>
-        <article>
-          <span>03</span>
-          <h3>Transparencia</h3>
-          <p>Presupuesto por escrito, comunicación clara y fotos cuando el trabajo lo requiere.</p>
-        </article>
-      </div>
-      <div class="stats-row">
-        <div><strong>+10</strong><span>Marcas atendidas</span></div>
-        <div><strong>4</strong><span>Elevadores de trabajo</span></div>
-        <div><strong>100%</strong><span>Diagnóstico con criterio técnico</span></div>
-        <div><strong>GBA Sur</strong><span>Avellaneda y alrededores</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA FINAL -->
-  <section class="cta-final">
-    <div class="container">
-      <span class="eyebrow"><span class="stripes"></span>Hablemos de tu auto</span>
-      <h2>Coordiná tu turno hoy</h2>
-      <p>Contanos qué necesita tu vehículo y te respondemos por WhatsApp en el horario de atención.</p>
-      <a href="https://wa.me/5491122334658?text=Hola%2C%20quiero%20consultar%20sobre%20mi%20auto" class="btn btn-primary">Hablar por WhatsApp</a>
+      <img src="assets/img/workshop/fachada-mg-service.jpg" alt="Fachada de MG Service en Avellaneda" loading="lazy">
     </div>
   </section>
 
@@ -238,7 +145,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col footer-logo">
-        <img src="assets/img/logo-white.png" alt="MG Service">
+        <img src="assets/img/logo-transparent.png" alt="MG Service">
         <p>Taller de mecánica integral premium, diagnóstico avanzado y concierge para vehículos de alta gama y multimarca. Zona sur del Gran Buenos Aires.</p>
       </div>
       <div class="footer-col">
@@ -251,7 +158,7 @@
       </div>
       <div class="footer-col">
         <h4>Contacto</h4>
-        <a href="https://wa.me/5491122334658">WhatsApp · +54 9 11 2233-4658</a>
+        <a href="https://wa.me/5491122334658">WhatsApp +54 9 11 2233-4658</a>
         <a href="https://www.instagram.com/mg_service1023/" target="_blank" rel="noopener">Instagram</a>
         <a href="mailto:info@mgservice.com.ar">info@mgservice.com.ar</a>
       </div>
@@ -262,13 +169,12 @@
     </div>
     <div class="footer-bottom">
       <span>© <span class="current-year"></span> MG Service. Todos los derechos reservados.</span>
-      <span>Mecánica integral premium · Concierge · Avellaneda</span>
     </div>
   </div>
 </footer>
 
 <a class="wa-float" href="https://wa.me/5491122334658?text=Hola%2C%20quiero%20consultar%20sobre%20mi%20auto" target="_blank" rel="noopener" aria-label="Hablar por WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.85.5 3.58 1.44 5.06L2 22l5.25-1.38a9.84 9.84 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.78 14.04c-.25.7-1.45 1.34-2 1.42-.51.08-1.17.11-1.89-.12-.43-.14-.98-.32-1.69-.62-2.98-1.29-4.92-4.3-5.07-4.5-.15-.2-1.21-1.6-1.21-3.06 0-1.45.76-2.16 1.03-2.46.27-.3.59-.37.78-.37.2 0 .39.002.56.01.18.008.42-.07.65.5.25.6.84 2.07.92 2.22.08.15.13.33.03.53-.1.2-.15.32-.3.5-.15.18-.31.4-.44.54-.15.15-.3.32-.13.62.17.3.78 1.28 1.67 2.07 1.15 1.02 2.12 1.34 2.42 1.49.3.15.48.13.65-.05.2-.2.78-.91.99-1.22.2-.3.4-.25.67-.15.27.1 1.72.81 2.02.96.3.15.5.22.57.35.08.13.08.74-.17 1.44z"/></svg>
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.85.5 3.58 1.44 5.06L2 22l5.25-1.38a9.84 9.84 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.78 14.04c-.25.7-1.45 1.34-2 1.42-.51.08-1.17.11-1.89-.12-.43-.14-.98-.32-1.69-.62-2.98-1.29-4.92-4.3-5.07-4.5-.15-.2-1.21-1.6-1.21-3.06 0-1.45.76-2.16 1.03-2.46.27-.3.59-.37.78-.37.2 0 .39.002.56.01.18.008.42-.07.65.5.25.6.84 2.07.92 2.22.08.15.13.33.03.53-.1.2-.15.32-.3.5-.15.18-.31.4-.44.54-.15.15-.3.32-.13.62.17.3.78 1.28 1.67 2.07 1.15 1.02 2.12 1.34 2.42 1.49.3.15.48.13.65-.05.2-.2.78-.91.99-1.22.2-.3.4-.25.67-.15.27.1 1.72.81 2.02.96.3.15.5.22.57.35.08.13.08.74-.17 1.44z"/></svg>
   WhatsApp
 </a>
 
