@@ -22,12 +22,15 @@ mg-service-web/
 └── ESTRATEGIA-MG-SERVICE.md  Documento de estrategia (auditoría, posicionamiento, copy, SEO)
 ```
 
-## ⚠️ Antes de publicar — reemplazar:
+## Datos de contacto (confirmados)
 
-1. **Número de WhatsApp**: está como placeholder `5491122334658` en los botones de WhatsApp (header, hero, CTA finales, footer, botón flotante). Buscá y reemplazá ese número por el real, con formato `549` + código de área + número, sin espacios ni guiones. Aparece en los 5 archivos `.html`.
-2. **Email de contacto**: `cyjautomotores@gmail.com` en el footer, en `contacto.html` y en el schema JSON-LD de la home y contacto.
-3. **Horarios**: en `contacto.html`, sección de horarios — ajustar si no coinciden con la realidad.
-4. **Galería de Trabajos** (`trabajos.html`): hay 2 fotos reales y 4 placeholders ("Próximo trabajo documentado"). A medida que tengan fotos de trabajos terminados (con autorización del cliente), reemplazar los placeholders por `<img>` reales siguiendo el mismo patrón que las dos primeras.
+Si alguno cambia, hay que actualizarlo en los 5 archivos `.html` y en el schema JSON-LD (`<script type="application/ld+json">`) de `index.html` y `contacto.html`.
+
+- **WhatsApp**: `+54 9 11 2233-4658` — en los links usa el formato `5491122334658` (`https://wa.me/5491122334658`).
+- **Email**: `cyjautomotores@gmail.com`
+- **Dirección**: Tte. Coronel Guiffra 1371, B1870 Avellaneda, Buenos Aires
+- **Horarios**: lunes a viernes de 9 a 18 hs, sábados de 9 a 13 hs.
+- **Dominio**: https://www.mg-service.com.ar/ (canónicas, Open Graph, `robots.txt` y `sitemap.xml` apuntan acá).
 
 ## Cómo publicarlo (deploy)
 
